@@ -81,13 +81,13 @@ const ContactList = () => {
 
                 <View style={styles.details}>
                     <Text style={styles.name} > {item.displayName} </Text>
-                    <Text>{item.phoneNumbers[0].number}</Text>
+                    <Text>{(item?.phoneNumbers.length > 0) ? (item?.phoneNumbers[0].number) : ('0000000000')}</Text>
                 </View>
 
             </View>
         )
     };
-    
+
     return (
         <View>
 
